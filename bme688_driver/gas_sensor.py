@@ -6,7 +6,7 @@ from gas_sensor_msgs.msg import Data
 
 class GasSensor(Node):
 
-    def __init__(self, bus_id=5):
+    def __init__(self, bus_id=5, freq=1):
 
         super().__init__('bme688_publisher')
         self.publisher_ = self.create_publisher(Data, '/bme688/data', 10)
@@ -32,7 +32,7 @@ class GasSensor(Node):
 
             self.get_logger().error(f"Sensor not initialized due to :  {e}")
         
-        timer_period = 1  # seconds
+        timer_period = freq  # seconds
         self.timer = self.create_timer(timer_period, self.publisher_callback)
     
     def publisher_callback(self):
