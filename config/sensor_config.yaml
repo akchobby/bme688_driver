@@ -1,3 +1,6 @@
+# hardware interface params
+i2c_bus: 5
+
 # rate at which data should be published
 frequency: 1 # Hz
 
@@ -11,9 +14,9 @@ gas_heater :
 air_quality: 
   - enable: False
   - burn_time: 300 # s
-  - hum_baseline: 40
-  - hum_weight: 0.25
-k: {"enable": 1, "fsfqf": 3}
+  - hum_baseline:  # humidity baseline value
+  - hum_weight: 0.25 # humidity weifht, impact of humidity on quality
+
           
 
 
