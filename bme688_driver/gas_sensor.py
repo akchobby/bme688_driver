@@ -41,16 +41,16 @@ class GasSensor(Node):
 
         if self.sensor.get_sensor_data():
             #'{0:.2f} C,{1:.2f} hPa,{2:.2f} %RH'
-            out_msg.stph.temperature = self.sensor.data.temperature
-            out_msg.stph.pressure = self.sensor.data.pressure
-            out_msg.stph.humidity = self.sensor.data.humidity
+            out_msg.standard_data.temperature = self.sensor.data.temperature
+            out_msg.standard_data.pressure = self.sensor.data.pressure
+            out_msg.standard_data.humidity = self.sensor.data.humidity
 
             if self.sensor.data.heat_stable:
                 #{1} Ohms 
-                out_msg.gas.stability = Data.gas.STABLE
+                out_msg.gas.stability = out_msg.gas.STABLE
                 out_msg.gas.resistance = self.sensor.data.gas_resistance
             else:
-                out_msg.gas.stability = Data.gas.UNSTABLE
+                out_msg.gas.stability = out_msg.gas.UNSTABLE
 
             self.publisher_.publish(out_msg)
         

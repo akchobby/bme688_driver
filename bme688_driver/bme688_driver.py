@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import rclpy
 from .gas_sensor import GasSensor
 
@@ -10,5 +12,5 @@ def main():
     executor.spin()
     executor.shutdown()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
