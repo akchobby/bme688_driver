@@ -4,7 +4,7 @@ This repository provides a ROS 2 wrapper around the bme680 python library to pub
 
 # Pre-requisites
 
-Ensure that you have the [bme680 library (forked version)]() installed in the machine follwing the steps under Hover Games 3.
+Ensure that you have the [bme680 library (forked version)](https://github.com/akchobby/bme680-python) installed in the machine follwing the steps under Hover Games 3.
 
 # Installation
 
