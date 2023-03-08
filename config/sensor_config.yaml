@@ -7,7 +7,7 @@ frequency: 1 # Hz
 # Sensor heating params
 gas_heater : 
   - temperature: 320
-  - gas_heater_duration: 150
+  - duration: 150
   - profile: 0
 
 # air quality params

@@ -61,12 +61,14 @@ class GasSensor(Node):
     def set_gas_heater_params(self, config):
 
         for param in config["gas_heater"]:
-            if list(param.key())[0] == "temperature":
+            
+            if list(param.keys())[0] == "temperature":
                 self.sensor.set_gas_heater_temperature(param["temperature"])
-            if list(param.key())[0] == "duration":
+
+            if list(param.keys())[0] == "duration":
                 self.sensor.set_gas_heater_duration(param["duration"])
-            if list(param.key())[0] == "profile":
+
+            if list(param.keys())[0] == "profile":
                 self.sensor.select_gas_heater_profile(param["profile"])
-            print(list(param.key())[0])
 
     
