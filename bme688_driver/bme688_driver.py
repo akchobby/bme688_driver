@@ -9,7 +9,7 @@ from gas_sensor import GasSensor
 def main():
 
     # Read in parameter file
-    file_path = "/".join([get_package_share_directory("bme688_driver"),"sensor_config.yaml"])
+    file_path = "/".join([get_package_share_directory("bme688_driver"),"config/sensor_config.yaml"])
     with open(file_path, 'r') as stream:
         sensor_config = yaml.full_load(stream)
 
