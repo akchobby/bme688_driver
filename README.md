@@ -24,6 +24,12 @@ cd <path_to_ros2_workspace>/
 source /opt/ros/<your_ROS2_Distro>/setup.bash
 colcon build --symlink-install # allows python scripts to chaged without rebuild
 ```
+
+note ensure the python script is given executable permission i.e
+
+```
+chmod u+x bme688_driver/bme688_driver/bme688_driver.py
+```
 * After the build source the pkg
 
 ```bash
