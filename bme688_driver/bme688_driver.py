@@ -3,7 +3,7 @@
 import rclpy
 import yaml
 from ament_index_python.packages import get_package_share_directory
-from .gas_sensor import GasSensor
+from gas_sensor import GasSensor
 
 
 def main():
